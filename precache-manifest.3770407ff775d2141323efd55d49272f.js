@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "aa325cfdbd2c192152b26d59b5db3fe3",
+    "revision": "4f7a21c4accffc590dc15262671d0b76",
     "url": "/monies/index.html"
   },
   {
-    "revision": "00e1cca2c92b120040e0",
-    "url": "/monies/static/css/main.b88f933d.chunk.css"
+    "revision": "6d0d9c067b0b86213cc8",
+    "url": "/monies/static/css/main.bb889dfe.chunk.css"
   },
   {
     "revision": "40059d5d75b19978c312",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/monies/static/js/2.9fa7654e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "00e1cca2c92b120040e0",
+    "revision": "6d0d9c067b0b86213cc8",
     "url": "/monies/static/js/main.eea0711c.chunk.js"
   },
   {

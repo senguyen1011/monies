@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/monies/static/css/main.b88f933d.chunk.css",
+    "main.css": "/monies/static/css/main.bb889dfe.chunk.css",
     "main.js": "/monies/static/js/main.eea0711c.chunk.js",
     "main.js.map": "/monies/static/js/main.eea0711c.chunk.js.map",
     "runtime-main.js": "/monies/static/js/runtime-main.5636dd0e.js",
@@ -8,15 +8,15 @@
     "static/js/2.9fa7654e.chunk.js": "/monies/static/js/2.9fa7654e.chunk.js",
     "static/js/2.9fa7654e.chunk.js.map": "/monies/static/js/2.9fa7654e.chunk.js.map",
     "index.html": "/monies/index.html",
-    "precache-manifest.202a77a3de3118c3f20193144ede7667.js": "/monies/precache-manifest.202a77a3de3118c3f20193144ede7667.js",
+    "precache-manifest.3770407ff775d2141323efd55d49272f.js": "/monies/precache-manifest.3770407ff775d2141323efd55d49272f.js",
     "service-worker.js": "/monies/service-worker.js",
-    "static/css/main.b88f933d.chunk.css.map": "/monies/static/css/main.b88f933d.chunk.css.map",
+    "static/css/main.bb889dfe.chunk.css.map": "/monies/static/css/main.bb889dfe.chunk.css.map",
     "static/js/2.9fa7654e.chunk.js.LICENSE.txt": "/monies/static/js/2.9fa7654e.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.5636dd0e.js",
     "static/js/2.9fa7654e.chunk.js",
-    "static/css/main.b88f933d.chunk.css",
+    "static/css/main.bb889dfe.chunk.css",
     "static/js/main.eea0711c.chunk.js"
   ]
 }
