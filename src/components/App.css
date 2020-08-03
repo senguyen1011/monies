@@ -33,16 +33,20 @@ main {
 }
 
 .shrink small {
-  /* font-size: 0.7rem; */
+  font-size: 0.7rem;
 }
 
-@media (min-width: 375px) {
+@media (min-width: 500px) {
   main {
     margin-top: 9rem;
   }
 
   .navbar {
     min-height: 8rem;
+  }
+
+  .shrink h3 {
+    font-size: 1.75rem;
   }
 
   .shrink h5 {
