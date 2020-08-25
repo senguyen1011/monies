@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/monies/static/css/main.bb889dfe.chunk.css",
-    "main.js": "/monies/static/js/main.eea0711c.chunk.js",
-    "main.js.map": "/monies/static/js/main.eea0711c.chunk.js.map",
+    "main.js": "/monies/static/js/main.8283a570.chunk.js",
+    "main.js.map": "/monies/static/js/main.8283a570.chunk.js.map",
     "runtime-main.js": "/monies/static/js/runtime-main.5636dd0e.js",
     "runtime-main.js.map": "/monies/static/js/runtime-main.5636dd0e.js.map",
-    "static/js/2.9fa7654e.chunk.js": "/monies/static/js/2.9fa7654e.chunk.js",
-    "static/js/2.9fa7654e.chunk.js.map": "/monies/static/js/2.9fa7654e.chunk.js.map",
+    "static/js/2.6c5df311.chunk.js": "/monies/static/js/2.6c5df311.chunk.js",
+    "static/js/2.6c5df311.chunk.js.map": "/monies/static/js/2.6c5df311.chunk.js.map",
     "index.html": "/monies/index.html",
-    "precache-manifest.3770407ff775d2141323efd55d49272f.js": "/monies/precache-manifest.3770407ff775d2141323efd55d49272f.js",
+    "precache-manifest.0171a385e635de27481fbd670b70365b.js": "/monies/precache-manifest.0171a385e635de27481fbd670b70365b.js",
     "service-worker.js": "/monies/service-worker.js",
     "static/css/main.bb889dfe.chunk.css.map": "/monies/static/css/main.bb889dfe.chunk.css.map",
-    "static/js/2.9fa7654e.chunk.js.LICENSE.txt": "/monies/static/js/2.9fa7654e.chunk.js.LICENSE.txt"
+    "static/js/2.6c5df311.chunk.js.LICENSE.txt": "/monies/static/js/2.6c5df311.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.5636dd0e.js",
-    "static/js/2.9fa7654e.chunk.js",
+    "static/js/2.6c5df311.chunk.js",
     "static/css/main.bb889dfe.chunk.css",
-    "static/js/main.eea0711c.chunk.js"
+    "static/js/main.8283a570.chunk.js"
   ]
 }
