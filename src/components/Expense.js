@@ -1,3 +1,4 @@
+import Cleave from 'cleave.js/react';
 import React, { Fragment, useState } from 'react';
 import BudgetItems from '../BudgetItems';
 import ExpenseForm from './ExpenseForm';
@@ -9,7 +10,7 @@ const Expense = (props) => {
   );
 
   const handleChange = (e, index) => {
-    BudgetItems[props.budgetIndex].items[index].value = Number(e.target.value);
+    BudgetItems[props.budgetIndex].items[index].value = Number(e.target.rawValue);
     let total = 0;
     for (const item of BudgetItems[props.budgetIndex].items) {
       total += item.value;
@@ -17,7 +18,7 @@ const Expense = (props) => {
     BudgetItems[props.budgetIndex].value = total;
     
     const copyValues = categoryValues;
-    copyValues[index] = Number(e.target.value);
+    copyValues[index] = Number(e.target.rawValue);
     setCategoryValues(copyValues);
     setCategoryTotal(total);
     props.onChange();
@@ -39,8 +40,17 @@ const Expense = (props) => {
             <div key={index} className='row mb-3'>
               <label htmlFor={`input${index}`} className='col-8-sm col-7 col-form-label'>{item.name}</label>
               <div className='col-4-sm col-5'>
-                <input className='form-control text-right' type='number' aria-label={item.name} min='0' step='0.01'
-                  value={categoryValues[index].toFixed(2)} onChange={(e) => handleChange(e, index)}/>
+                <Cleave className='form-control text-right' id={`input${index}`} aria-label={item.name}
+                  value={categoryValues[index]} onChange={(e) => handleChange(e, index)} 
+                  options={{
+                    numeral: true, 
+                    numeralThousandsGroupStyle: 'none', 
+                    numeralDecimalScale: 2, 
+                    numeralPositiveOnly: true, 
+                    prefix: '$',
+                    rawValueTrimPrefix: true
+                  }} 
+                />
               </div>
             </div>
           );

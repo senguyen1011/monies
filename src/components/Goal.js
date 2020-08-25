@@ -1,3 +1,4 @@
+import Cleave from 'cleave.js/react';
 import React, { Fragment, useState } from 'react';
 
 const Goal = (props) => {
@@ -6,8 +7,8 @@ const Goal = (props) => {
   const [invest, setInvest] = useState(0);
 
   const handleChange = (e) => {
-    setGoal(Number(e.target.value));
-    const time = Number(e.target.value) / props.budget;
+    setGoal(Number(e.target.rawValue));
+    const time = Number(e.target.rawValue) / props.budget;
     setInvest(props.invest * time);
 
     if (time < 1) {
@@ -45,8 +46,17 @@ const Goal = (props) => {
           <label htmlFor='goal' className='col-form-label pl-4 w-100 bg-input'>Set Goal</label>
         </div>
         <div className='col-8 pl-0'>
-          <input type='number' id='goal' className='form-control text-right' value={goal.toFixed(2)} 
-            onChange={(e) => handleChange(e)} 
+          <Cleave className='form-control text-right' id='goal' aria-label='Savings & Investments'
+            value={goal} onChange={(e) => handleChange(e)} 
+            options={{
+              numeral: true, 
+              numeralThousandsGroupStyle: 'none', 
+              numeralDecimalScale: 2, 
+              numeralPositiveOnly: true, 
+              prefix: '$', 
+              noImmediatePrefix: true, 
+              rawValueTrimPrefix: true
+            }} 
           />
         </div>
         

@@ -1,19 +1,28 @@
+import Cleave from 'cleave.js/react';
 import React, { useState } from 'react';
 
 const Invest = (props) => {
   const [invest, setInvest] = useState(props.invest);
 
   const handleChange = (e) => {
-    setInvest(Number(e.target.value));
-    props.investCallback(Number(e.target.value));
+    setInvest(Number(e.target.rawValue));
+    props.investCallback(Number(e.target.rawValue));
   }
 
   return (
     <div className='row mb-3'>
       <label htmlFor='invest' className='col-8 col-form-label'>Savings & Investments</label>
       <div className='col-4'>
-        <input className='form-control text-right' id='invest' type='number' aria-label='Savings & Investments'
-          value={invest.toFixed(2)} onChange={(e) => handleChange(e)} min='0' step='0.01' 
+        <Cleave className='form-control text-right' id='invest' aria-label='Savings & Investments'
+          value={invest} onChange={(e) => handleChange(e)} 
+          options={{
+            numeral: true, 
+            numeralThousandsGroupStyle: 'none', 
+            numeralDecimalScale: 2, 
+            numeralPositiveOnly: true, 
+            prefix: '$',
+            rawValueTrimPrefix: true
+          }} 
         />
       </div>
     </div>

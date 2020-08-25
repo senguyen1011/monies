@@ -1,18 +1,18 @@
+import Cleave from 'cleave.js/react';
 import React, { Fragment, useState } from 'react';
 
 const Income = (props) => {
   const [pay, setPay] = useState(props.pay);
   const [other, setOther] = useState(props.other);
 
-  const handleChange = (e, isPay) => {
-    if (isPay) {
-      setPay(Number(e.target.value));
-      props.incomeCallback(Number(e.target.value), props.other);
-    }
-    else {
-      setOther(Number(e.target.value));
-      props.incomeCallback(props.pay, Number(e.target.value));
-    }
+  const handlePayChange = (e) => {
+    setPay(Number(e.target.rawValue));
+    props.incomeCallback(Number(e.target.rawValue), props.other);
+  }
+
+  const handleOtherChange = (e) => {
+    setOther(Number(e.target.rawValue));
+    props.incomeCallback(props.pay, Number(e.target.rawValue));
   }
 
   return (
@@ -21,16 +21,32 @@ const Income = (props) => {
       <div className='row mb-3'>
         <label htmlFor='pay' className='col-8 col-form-label'>Monthly Pay</label>
         <div className='col-4'>
-          <input className='form-control text-right' id='pay' type='number' aria-label='Monthly Pay'
-            value={pay.toFixed(2)} onChange={(e) => handleChange(e, true)} min='0' step='0.01' 
+          <Cleave className='form-control text-right' id='pay' aria-label='Monthly Pay' 
+            value={pay} onChange={(e) => handlePayChange(e)} 
+            options={{
+              numeral: true, 
+              numeralThousandsGroupStyle: 'none', 
+              numeralDecimalScale: 2, 
+              numeralPositiveOnly: true, 
+              prefix: '$',
+              rawValueTrimPrefix: true
+            }} 
           />
         </div>
       </div>
       <div className='row mb-3'>
         <label htmlFor='other' className='col-8 col-form-label'>Other Income</label>
         <div className='col-4'>
-          <input className='form-control text-right' id='other' type='number' aria-label='Other Income' 
-            value={other.toFixed(2)} onChange={(e) => handleChange(e, false)} min='0' step='0.01' 
+        <Cleave className='form-control text-right' id='other' aria-label='Other Income'
+            value={other} onChange={(e) => handleOtherChange(e)} 
+            options={{
+              numeral: true, 
+              numeralThousandsGroupStyle: 'none', 
+              numeralDecimalScale: 2, 
+              numeralPositiveOnly: true, 
+              prefix: '$',
+              rawValueTrimPrefix: true
+            }} 
           />
         </div>
       </div>
